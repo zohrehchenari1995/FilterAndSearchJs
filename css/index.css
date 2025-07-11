@@ -1,0 +1,180 @@
+@import url("/css/font.css");
+
+/* css reset  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* font size */
+html {
+  font-size: 62.5%;
+}
+
+/* variable */
+:root {
+  --color-primary-background: #000430;
+  --color-secondary-background: #171c48;
+  --color-trash: #dc143c;
+  --color-text: #fff;
+  --purpel: #828dff;
+  --teal: #24feee;
+
+  --border-radius-xs: 2px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 8px;
+  --border-radius-xl: 12px;
+  --border-radius-2xl: 16px;
+  --border-radius-3xl: 24px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.nav {
+  background: hsla(236, 100%, 8%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(236, 100%, 8%, 1) 0%,
+    hsla(211, 100%, 28%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(236, 100%, 8%, 1) 0%,
+    hsla(211, 100%, 28%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(236, 100%, 8%, 1) 0%,
+    hsla(211, 100%, 28%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000328", endColorstr="#00458E", GradientType=1 );
+
+  width: calc(100vw - 1rem);
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius-lg);
+}
+.nav .nav__title {
+  color: var(--color-text);
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.nav__search input {
+  padding: 0.7rem 1.8rem;
+  border-radius: var(--border-radius-lg);
+  margin-top: 1rem;
+  outline: none;
+  border: 2px solid var(--color-secondary-background);
+}
+.nav__search input:focus {
+  border: 2px solid var(--color-secondary-background);
+}
+.nav__search i {
+  position: relative;
+  left: 25px;
+}
+.nav__button {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+.nav__button .btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-lg);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-primary-background);
+  letter-spacing: 0.01rem;
+  outline: none;
+  border: 1px solid var(--purpel);
+}
+.nav__button .btn:hover {
+  background-color: var(--purpel);
+  color: var(--color-secondary-background);
+}
+::placeholder {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.container__products {
+  margin-top: 5rem;
+}
+.container__products .product {
+  margin-bottom: 4rem;
+  width: 300px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+}
+.container__products .product img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
+.product__detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container__products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    margin-top: 10rem;
+  }
+  .nav .nav__title {
+    font-size: 2.5rem;
+  }
+  .nav__button .btn {
+    font-size: 1.8rem;
+  }
+  .nav__search input {
+    padding: 1rem 5rem;
+    margin-right: 1.1rem;
+  }
+  ::placeholder{
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+}
+
+@media screen and (min-width: 1024px) {
+  .container__products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5rem;
+    margin-top: 10rem;
+  }
+}
