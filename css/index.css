@@ -60,7 +60,7 @@ html {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000328", endColorstr="#00458E", GradientType=1 );
 
   width: calc(100vw - 1rem);
-  height: 200px;
+  height: 220px;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -81,7 +81,7 @@ html {
   border: 2px solid var(--color-secondary-background);
 }
 .nav__search input:focus {
-  border: 2px solid var(--color-secondary-background);
+  border: 4px solid var(--purpel);
 }
 .nav__search i {
   position: relative;
@@ -90,8 +90,11 @@ html {
 .nav__button {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.8rem;
-  margin-top: 2rem;
+  /* justify-items: center; */
+  /* align-items: center; */
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-bottom:1rem ;
 }
 .nav__button .btn {
   padding: 0.5rem 1rem;
@@ -101,7 +104,8 @@ html {
   color: var(--color-primary-background);
   letter-spacing: 0.01rem;
   outline: none;
-  border: 1px solid var(--purpel);
+  border: 4px solid var(--purpel);
+  cursor: pointer;
 }
 .nav__button .btn:hover {
   background-color: var(--purpel);
@@ -111,18 +115,18 @@ html {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
 .container__products {
-  margin-top: 5rem;
+  margin: 4rem 0;
+  display: grid;
+  gap: 4rem;
 }
 .container__products .product {
-  margin-bottom: 4rem;
+ 
   width: 300px;
   height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1rem;
   border-radius: var(--border-radius-lg);
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
 }
@@ -134,17 +138,19 @@ html {
   display: block;
   margin-bottom: 2rem;
 }
-
 .product {
   display: flex;
   flex-direction: column;
-}
+  margin-bottom: 0rem;
 
+  
+}
 .product__detail {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 5rem;
+
 }
 
 @media screen and (min-width: 768px) {
@@ -157,6 +163,9 @@ html {
   .nav .nav__title {
     font-size: 2.5rem;
   }
+  .nav__button{
+    gap: 1.8rem;
+  }
   .nav__button .btn {
     font-size: 1.8rem;
   }
@@ -164,10 +173,10 @@ html {
     padding: 1rem 5rem;
     margin-right: 1.1rem;
   }
-  ::placeholder{
-  font-size: 1.8rem;
-  font-weight: bold;
-}
+  ::placeholder {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
 }
 
 @media screen and (min-width: 1024px) {
