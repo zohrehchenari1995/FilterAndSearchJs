@@ -11,12 +11,15 @@ let filters = {
 
 document.addEventListener("DOMContentLoaded", () => {
   axios
-    .get("http://localhost:3000/items")
+    // .get("http://localhost:3000/items")
+    .get("./data/items.json")
     .then((response) => {
-      allProductsData = response.data;
+      // allProductsData = response.data;
+      allProductsData = response.data.items;
+
 
       //render products on DOM:
-      renderProducts(response.data, filters);
+      renderProducts(allProductsData, filters);
     })
     .catch((error) => console.log(error));
 });
