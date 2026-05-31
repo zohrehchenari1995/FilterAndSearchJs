@@ -3,7 +3,7 @@
 A fast and interactive product filtering system built with JavaScript, designed to simulate a real online store experience.
 
 # 🔗 Live Demo  
-👉 https://zohrehchenari1995.github.io/FilterAndSearchJs/data/items.json
+👉 https://zohrehchenari1995.github.io/FilterAndSearchJs/
 
 
 ## 🚀 Overview  
